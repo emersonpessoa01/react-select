@@ -7,44 +7,43 @@ export default function App() {
   const [transactions, setTransactions] = React.useState([]);
 
   React.useEffect(() => {
-    const fetchUrl = async ()=>{
-      const url ="https://api-transaction-chanceller.herokuapp.com/transaction"
-      const periodUrl = `${url}?period=${currentPeriod}`
+    const fetchUrl = async () => {
+      const url =
+        "https://api-transaction-chanceller.herokuapp.com/transaction";
+      const periodUrl = `${url}?period=${currentPeriod}`;
 
-      const resource = await fetch(periodUrl)
-      const json = await resource.json();
-      console.log(json)
+      const res = await fetch(periodUrl);
+      const json = await res.json();
+      console.log(json);
+      // setTransactions(json.descriptions); //erro induzido pelo professor
+      setTransactions(json); 
+    };
 
-      setTransactions(json)
-    }
-    
-    fetchUrl()
-  },[currentPeriod])
+    fetchUrl();
+  }, [currentPeriod]);
 
   React.useEffect(() => {
     M.AutoInit();
   }, []);
 
-  const handleSelectChange=(event)=>{
+  const handleSelectChange = (event) => {
     const newPeriod = event.target.value;
     setCurrentPeriod(newPeriod);
-  }
-  
+  };
+
   return (
     <div className="container">
       <h1 className="center">React Select</h1>
-      <select vaue={currentPeriod} onChange={handleSelectChange}>
+      <select value={currentPeriod} onChange={handleSelectChange}>
         {PERIODS.map((period) => {
-          return (
-            <option key={period} value={period}>
-              {period}
-            </option>
-          );
+          return <option key={period}>{period}</option>;
         })}
       </select>
-      <div>{transactions.map((id,description) =>{
-        return (<p key={id}>{description}</p>)
-      })}</div>
+      <div>
+        {transactions.map(({id, description}) => (
+          <p key={id}>{description}</p>
+        ))}
+      </div>
     </div>
   );
 }
