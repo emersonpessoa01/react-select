@@ -1,10 +1,11 @@
 # react-select-app
-`-yarn`<br>
-`- yarn build`<br>
-`- yarn start`<br>
-
-
+#### preview: 
+* app - [react-select](https://react-select-app.netlify.app/)<br>
+* api - [transaction-api](https://api-transaction-chanceller.herokuapp.com/transaction)<br>
 
 ##### Obs: :speech_balloon: <br> 
-Atualizar as dependências para última versão:<br>
-`-yarn upgrade-interactive --latest` 
+Atualizar as dependências para última versão após startar:<br>
+`- yarn`<br>
+`- yarn build`<br>
+`- yarn start`<br>
+`- yarn upgrade-interactive --latest` 
