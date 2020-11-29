@@ -1,4 +1,4 @@
-# transactio-app
+# react-select-app
 `-yarn`<br>
 `- yarn build`<br>
 `- yarn start`<br>
