@@ -40,8 +40,8 @@ export default function App() {
         })}
       </select>
       <div>
-        {transactions.map(({id, description}) => (
-          <p key={id}>{description}</p>
+        {transactions.map(({_id, description}) => (
+          <p key={_id}>{description}</p>
         ))}
       </div>
     </div>
