@@ -1,6 +1,6 @@
 # react-select-app
 #### preview: 
-* app - [react-select](https://react-select-app.netlify.app/)<br>
+* app - [react-select](https://react-select-sand.vercel.app/)<br>
 * api - [transaction-api](https://api-transaction-chanceller.herokuapp.com/transaction)<br>
 
 ##### Obs: :speech_balloon: <br> 
